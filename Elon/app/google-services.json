@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1064689146356",
+    "firebase_url": "https://elon-a389f.firebaseio.com",
+    "project_id": "elon-a389f",
+    "storage_bucket": "elon-a389f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064689146356:android:100965981bdc6a6f8d41a1",
+        "android_client_info": {
+          "package_name": "tj.behruz.elon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064689146356-b3eip3eqmfbjjkmdneih5tihrb59tb8u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tj.behruz.elon",
+            "certificate_hash": "c7de162f97270b121e220066c5d2300c652c8775"
+          }
+        },
+        {
+          "client_id": "1064689146356-4db19ibtg3hgni94c4c3ci6sdminifod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARw5ZTREs9SLkQZOl9Ey6iUM8sgVMgw4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064689146356-4db19ibtg3hgni94c4c3ci6sdminifod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

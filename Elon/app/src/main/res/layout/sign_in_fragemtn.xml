@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+       >
+
+
+        <TextView
+            android:id="@+id/registration_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/roboto"
+            android:text="Регистрация"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/registration_title"
+            app:layout_constraintStart_toStartOf="@+id/registration_title"
+            app:layout_constraintTop_toBottomOf="@+id/registration_title"
+            app:layout_constraintVertical_bias="0.26">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+
+                    android:lineHeight="24sp"
+                    android:text="@string/name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/name_title"
+                    app:layout_constraintStart_toStartOf="@+id/name_title"
+                    app:layout_constraintTop_toBottomOf="@+id/name_title" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#F5F5F5"
+                    app:layout_constraintEnd_toEndOf="@+id/first_name"
+                    app:layout_constraintStart_toStartOf="@+id/first_name"
+                    app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+                <TextView
+                    android:id="@+id/surname_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+
+                    android:lineHeight="24sp"
+                    android:text="Фамилия"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/first_name"
+                    app:layout_constraintStart_toStartOf="@+id/view10"
+                    app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+                <EditText
+                    android:id="@+id/surname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/surname_title"
+                    app:layout_constraintStart_toStartOf="@+id/surname_title"
+                    app:layout_constraintTop_toBottomOf="@+id/surname_title" />
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#F5F5F5"
+                    app:layout_constraintEnd_toEndOf="@+id/surname"
+                    app:layout_constraintStart_toStartOf="@+id/surname"
+                    app:layout_constraintTop_toBottomOf="@+id/surname" />
+
+                <Button
+                    android:id="@+id/registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:fontFamily="@font/roboto"
+                    android:padding="14dp"
+                    android:text="Регистрация"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/view11"
+                    app:layout_constraintTop_toBottomOf="@+id/view11" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

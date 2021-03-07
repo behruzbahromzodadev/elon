@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior= "single" >
+
+    <item
+        android:id="@+id/profile_menu"
+        android:icon="@drawable/profile_icon"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/history_payment_menu"
+        android:icon="@drawable/wallet_icon"
+        android:title="@string/history_payments" />
+    <item
+        android:id="@+id/canceled_ads_menu"
+        android:icon="@drawable/canceled_icon"
+        android:title="@string/canceled_orders" />
+    <item
+        android:id="@+id/history_orders_menu"
+        android:icon="@drawable/history_icon"
+        android:title="@string/history_orders" />
+
+    </group>
+
+    <item
+        android:id="@+id/home_menu"
+        android:icon="@drawable/home_icon"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/logout_menu"
+        android:icon="@drawable/logout_icon"
+        android:title="@string/exit" />
+
+</menu>

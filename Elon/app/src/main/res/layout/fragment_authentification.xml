@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/authentication"
+            android:textColor="@color/black"
+            android:textSize="@dimen/giant_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/authentication_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/base_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/first_code"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/second_code"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/authentication_info"
+            app:layout_constraintTop_toTopOf="@+id/second_code" />
+
+        <EditText
+            android:id="@+id/second_code"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/third_code"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/first_code"
+            app:layout_constraintTop_toTopOf="@+id/third_code" />
+
+        <EditText
+            android:id="@+id/third_code"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/fourth_code"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/second_code"
+            app:layout_constraintTop_toTopOf="@+id/fourth_code" />
+
+        <EditText
+            android:id="@+id/fourth_code"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            android:ems="1"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/fives"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/third_code"
+            app:layout_constraintTop_toTopOf="@+id/fives" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/little_margin"
+            android:background="@color/viewColor"
+            app:layout_constraintEnd_toEndOf="@+id/first_code"
+            app:layout_constraintStart_toStartOf="@+id/first_code"
+            app:layout_constraintTop_toBottomOf="@+id/first_code" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/little_margin"
+            android:background="@color/viewColor"
+            app:layout_constraintEnd_toEndOf="@+id/second_code"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/second_code"
+            app:layout_constraintTop_toBottomOf="@+id/second_code" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/little_margin"
+            android:background="@color/viewColor"
+            app:layout_constraintEnd_toEndOf="@+id/third_code"
+            app:layout_constraintStart_toStartOf="@+id/third_code"
+            app:layout_constraintTop_toBottomOf="@+id/third_code" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/little_margin"
+            android:background="@color/viewColor"
+            app:layout_constraintEnd_toEndOf="@+id/fourth_code"
+            app:layout_constraintStart_toStartOf="@+id/fourth_code"
+            app:layout_constraintTop_toBottomOf="@+id/fourth_code" />
+
+        <Button
+            android:id="@+id/check_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/btn_background"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/fives"
+            app:layout_constraintStart_toStartOf="@+id/first_code"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <EditText
+            android:id="@+id/fives"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/authentication_info"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fourth_code"
+            app:layout_constraintTop_toBottomOf="@+id/authentication_info" />
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/viewColor"
+
+            app:layout_constraintEnd_toEndOf="@+id/fives"
+            app:layout_constraintStart_toStartOf="@+id/fives"
+            app:layout_constraintTop_toBottomOf="@+id/fourth_code" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

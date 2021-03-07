@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp">
+
+        <ImageView
+            android:id="@+id/tv_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_image"
+            app:layout_constraintTop_toTopOf="@+id/tv_image" />
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/view9"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/phone_number"
+            app:layout_constraintEnd_toStartOf="@+id/phone_number"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/status"
+            app:layout_constraintTop_toTopOf="@+id/phone_number" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/phone_number"
+            app:layout_constraintEnd_toStartOf="@+id/view9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/view11"
+            app:layout_constraintTop_toTopOf="@+id/phone_number" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/status"
+            app:layout_constraintEnd_toStartOf="@+id/status"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/current_date"
+            app:layout_constraintTop_toTopOf="@+id/status" />
+
+        <TextView
+            android:id="@+id/current_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:drawableLeftCompat="@drawable/ic_calendar"
+            app:layout_constraintEnd_toStartOf="@+id/view11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toTopOf="@+id/status" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

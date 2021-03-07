@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/welcome"
+            android:textColor="@color/black"
+            android:textSize="@dimen/giant_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcome_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/little_margin"
+            android:text="@string/welcome_description"
+            app:layout_constraintStart_toStartOf="@+id/welcome"
+            app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+        <TextView
+            android:id="@+id/number_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/number_phone"
+            app:layout_constraintStart_toStartOf="@+id/welcome_description"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_description" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/choose_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/little_margin"
+            app:layout_constraintStart_toStartOf="@+id/number_phone"
+            app:layout_constraintTop_toBottomOf="@+id/number_phone">
+
+
+            <ImageView
+                android:id="@+id/flag_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/little_margin"
+                android:layout_marginLeft="@dimen/little_margin"
+                android:layout_marginTop="@dimen/base_margin_half"
+                android:layout_marginBottom="@dimen/base_margin_half"
+                android:contentDescription="@string/flag_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/flag" />
+
+            <ImageView
+                android:id="@+id/more_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/little_margin"
+                android:layout_marginLeft="@dimen/little_margin"
+                android:contentDescription="@string/more_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/flag_icon"
+                app:layout_constraintStart_toEndOf="@+id/flag_icon"
+                app:layout_constraintTop_toTopOf="@+id/flag_icon"
+                app:srcCompat="@drawable/ic_more" />
+
+            <TextView
+                android:id="@+id/country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/little_margin"
+                android:layout_marginLeft="@dimen/little_margin"
+                android:layout_marginEnd="@dimen/little_margin"
+                android:layout_marginRight="@dimen/little_margin"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/tajikistan_phone_code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/big_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/flag_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/more_icon"
+                app:layout_constraintTop_toTopOf="@+id/flag_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/little_margin"
+            android:layout_marginLeft="@dimen/little_margin"
+            android:layout_marginEnd="@dimen/little_margin"
+            android:layout_marginRight="@dimen/little_margin"
+            android:background="@android:color/transparent"
+            android:inputType="number"
+
+            app:layout_constraintBottom_toBottomOf="@+id/choose_country"
+            app:layout_constraintEnd_toStartOf="@+id/status"
+            app:layout_constraintStart_toEndOf="@+id/choose_country"
+            app:layout_constraintTop_toTopOf="@+id/choose_country" />
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/flag_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/number"
+            app:layout_constraintEnd_toEndOf="@+id/welcome"
+            app:layout_constraintTop_toTopOf="@+id/number"
+            app:srcCompat="@drawable/ic_check" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/little_margin"
+            android:background="@color/viewColor"
+            app:layout_constraintEnd_toEndOf="@+id/status"
+            app:layout_constraintStart_toStartOf="@+id/choose_country"
+            app:layout_constraintTop_toBottomOf="@+id/number" />
+
+        <CheckBox
+            android:id="@+id/rule_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/little_margin"
+            android:checked="true"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <Button
+            android:id="@+id/accept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/enabled_btn_background"
+            android:enabled="false"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/accept_number"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/rule_checkbox"
+            app:layout_constraintStart_toStartOf="@+id/rule_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/rule_checkbox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
